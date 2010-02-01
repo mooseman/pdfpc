@@ -5,6 +5,28 @@
 This small project is aimed at creating some public-domain C code (using a functional-programming approach) 
 for manipulating data structures - mostly lists.  
 
+The aim is to eventually cover all of the following areas -  
+
+*  List creation - Done.  Many thanks to Kurt Kuzba who did the public-domain linked-list code used here. 
+   Many thanks also to "kermi3" at Cprogramming.com who did the mygetch() function - this is a "getch()" 
+   equivalent which works on *nix.    
+*  Filter 
+*  Map  
+*  Sort  
+*  Concat (join) 
+*  Split, subset. Select a subset of a list's elements.  
+*  Head 
+*  Tail 
+*  Length 
+*  Take  
+*  Drop  
+*  Foldl  
+*  Foldr  
+*  Zip 
+*  Membership  (the "in" operator)  
+*  Non-membership  (the "not in" operator)  
+
+
 This code is released to the public domain. 
 "Share and enjoy....."   ;)   
 
