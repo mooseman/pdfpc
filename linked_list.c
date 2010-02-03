@@ -36,7 +36,7 @@ int mygetch( ) {
 
 /* *************************************************************** */ 
 
-typedef struct {
+typedef struct { 
 	void *item, 
          *next, 
          *prev;   /*   This structure provides the   */
