@@ -18,15 +18,15 @@ int myarray[] = {24, 37, 142, 205} ;
 /*  Function to return the head of an array.  */ 
 int head( int *array ) 
 { 
-    return &array[0] ;      
+    return array[0] ;      
 } ; 
 
 
 int main(void) 
 { 
     
-   printf(head( myarray )); 
-   printf("myarray[%d] = %x ", myarray[0]);    
+   printf("First element of myarray is %d \n", head( myarray )); 
+   printf("myarray[%d] \n", myarray[0]);    
    return 0 ; 
 } 
 
