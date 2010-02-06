@@ -10,7 +10,9 @@ library. It was done by Sean Barrett, and is from here - http://nothings.org/stb
 Many thanks to Sean for doing that! 
 *********************************************************************************************************************************
 
-The aim is for pdfpc to eventually cover all of the following areas -  
+The aim is for pdfpc to eventually cover all of the following areas.  
+Note that Lpred and Lsucc are different to Haskell's "pred" and "succ" functions.  
+Those functions work on enums - these ones work on arrays.  
 
 *  Filter 
 *  Map  
@@ -22,8 +24,8 @@ The aim is for pdfpc to eventually cover all of the following areas -
 *  Init 
 *  Last 
 *  Lookup 
-*  Pred 
-*  Succ 
+*  Lpred - Done.  Return the array ("list") element before the specified one. 
+*  Lsucc  - Done.  Return the array ("list") element after the specified one. 
 *  Replicate 
 *  SplitAt 
 *  Concat (join) 
