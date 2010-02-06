@@ -5,27 +5,37 @@
 This small project is aimed at creating some public-domain C code (using a functional-programming approach) 
 for manipulating data structures - mostly lists.  
 
-The aim is to eventually cover all of the following areas -  
+Acknowledgement - I have included the file "stb.h" in this project.  That is a very good public-domain C utility 
+library. It was done by Sean Barrett, and is from here - http://nothings.org/stb/stb_h.html .  
+Many thanks to Sean for doing that! 
+*********************************************************************************************************************************
 
-*  List creation - Done.  Many thanks to Kurt Kuzba who did the public-domain linked-list code used here. 
-   Many thanks also to "kermi3" at Cprogramming.com who did the mygetch() function - this is a "getch()" 
-   equivalent which works on *nix.    
+The aim is for pdfpc to eventually cover all of the following areas -  
+
 *  Filter 
 *  Map  
 *  Sort  
+*  Any 
+*  All 
+*  Elem ( Array membership  (the "in" operator)  ) 
+*  NotElem ( Array non-membership  (the "not in" operator)   )  
+*  Init 
+*  Last 
+*  Lookup 
+*  Pred 
+*  Succ 
+*  Replicate 
+*  SplitAt 
 *  Concat (join) 
-*  Split, subset. Select a subset of a list's elements.  
-*  Head 
-*  Tail 
-*  Length 
+*  Slice - Done 
+*  Head - Done 
+*  Tail - Done 
+*  Length - Done 
 *  Take  
 *  Drop  
 *  Foldl  
 *  Foldr  
 *  Zip 
-*  Membership  (the "in" operator)  
-*  Non-membership  (the "not in" operator)  
-
 
 This code is released to the public domain. 
 "Share and enjoy....."   ;)   
