@@ -12,8 +12,7 @@
 /*  Function to return the tail of an array.  */ 
 void tail( int *array, int length ) 
 { 
-   int tailarray[length-1] ; 
-   tailarray = (*array[1]) ;   
+   int *tailarray = *array+1 ;    
    int i; 
    for(i=0; i<length-1; i++)
      {    

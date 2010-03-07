@@ -2,13 +2,14 @@
 *** README -   pdfpc  *** 
 *** Public Domain Functional Programming in C *** 
 
-This small project is aimed at creating some public-domain C code (using a functional-programming approach) 
-for manipulating data structures - mostly lists.  
+This small project is aimed at creating some public-domain C code (using a 
+functional-programming approach) for manipulating data structures - mostly lists.  
 
-Acknowledgement - I have included the file "stb.h" in this project.  That is a very good public-domain C utility 
-library. It was done by Sean Barrett, and is from here - http://nothings.org/stb/stb_h.html .  
+Acknowledgement - I have included the file "stb.h" in this project.  That is a very 
+good public-domain C utility library. It was done by Sean Barrett, and is from 
+here - http://nothings.org/stb/stb_h.html .  
 Many thanks to Sean for doing that! 
-*********************************************************************************************************************************
+************************************************************************************************
 
 The aim is for pdfpc to eventually cover all of the following areas.  
 Note that Lpred and Lsucc are different to Haskell's "pred" and "succ" functions.  
@@ -30,6 +31,7 @@ Those functions work on enums - these ones work on arrays.
 *  SplitAt 
 *  Concat (join) 
 *  Slice - Done 
+*  Intersperse ( Insert a separator between elements of a list )  
 *  Head - Done 
 *  Tail - Done 
 *  Length - Done 
