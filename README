@@ -16,7 +16,7 @@ Note that Lpred and Lsucc are different to Haskell's "pred" and "succ" functions
 Those functions work on enums - these ones work on arrays.  
 
 *  Filter 
-*  Map  
+*  Map - Done.   
 *  Sort  
 *  Any 
 *  All 
