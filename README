@@ -41,7 +41,7 @@ Those functions work on enums - these ones work on arrays.
 *  Take  
 *  Drop  
 *  Scan - Done  
-*  Fold  
+*  Fold - Done  
 *  Zip 
 
 This code is released to the public domain. 
