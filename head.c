@@ -8,26 +8,37 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <math.h>
 #include <termios.h>
 #include <unistd.h>
 
 
 /*  Declare an array and fill it with data. */  
-int myarray[] = {24, 37, 142, 205} ; 
+int myarray[] = {2, 7, 15, 24, 37, 42, 75, 105} ; 
 
 /*  Function to return the head of an array.  */ 
-int head( int *array ) 
-{ 
-    return array[0] ;      
+/*  Return the first n elements of the array. */  
+void head(int n, int *array ) 
+{     
+    int i; 
+   
+    printf("Getting head[%d] of array \n", n); 
+    printf("(First %d elements of array.) \n", n); 
+    
+    for( (i=0); (i<n); i++)
+    {                
+       printf("Element[%d] of array is %d \n", i, myarray[i]);               
+    } 
+    
 } ; 
 
 
 int main(void) 
 { 
     
-   printf("First element of myarray is %d \n", head( myarray )); 
-   printf("myarray[%d] \n", myarray[0]);    
+   head(3, myarray);      
    return 0 ; 
+   
 } 
 
 

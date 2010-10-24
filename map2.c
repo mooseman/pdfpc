@@ -1,6 +1,6 @@
 
 
-/*  map1.c  */  
+/*  map2.c  */  
 
 /*                                                     
   A simple program to map an integer (in a given range) 
