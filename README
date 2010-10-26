@@ -18,31 +18,59 @@ areas. Note that Lpred and Lsucc are different to Haskell's
 "pred" and "succ" functions.  
 Those functions work on enums - these ones work on arrays.  
 
-*  Filter 
-*  Map - Done.   
-*  Sort  
-*  Any 
 *  All 
+*  Any 
+*  Append (++)  
+*  Concat (join) 
+*  Cons (:)  
+*  Drop  
 *  Elem ( Array membership  (the "in" operator)  ) 
-*  NotElem ( Array non-membership  (the "not in" operator) )  
+*  ElemIndex 
+*  Filter 
+*  Find 
+*  FindIndex 
+*  FindIndices 
+*  Fold - Done  
+*  Fst 
+*  Group 
+*  GroupBy
+*  Head - Done 
 *  Init 
+*  Insert 
+*  InsertBy
+*  Intersect 
+*  IntersectBy 
+*  Intersperse - Done 
+*  IsPrefixOf 
+*  IsSuffixOf 
 *  Last 
+*  Length - Done 
 *  Lookup 
 *  Lpred - Done.  Return the array ("list") element before the specified one. 
 *  Lsucc  - Done.  Return the array ("list") element after the specified one. 
+*  Map - Done.   
+*  NotElem ( Array non-membership  (the "not in" operator) )  
+*  Nub (removes duplicates from a list) 
+*  NubBy 
+*  Partition 
 *  Replicate 
-*  SplitAt 
-*  Concat (join) 
-*  Slice - Done 
-*  Intersperse - Done 
-*  Head - Done 
-*  Tail - Done 
-*  Length - Done 
-*  Take  
-*  Drop  
 *  Scan - Done  
-*  Fold - Done  
+*  Sequence - the (<|) (|>) and (><) operators in Haskell.   
+*  Show 
+*  Shows 
+*  Snd  
+*  Sort  
+*  SplitAt 
+*  Slice - Done 
+*  Tail - Done 
+*  Take  
+*  Transpose 
+*  Union 
+*  UnionBy 
+*  Unzip  
 *  Zip 
+*  ZipWith 
+
 
 This code is released to the public domain. 
 "Share and enjoy....."   ;)   

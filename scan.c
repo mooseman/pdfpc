@@ -5,6 +5,8 @@
 /*  Apply an operator to all elements of an array, and  */
 /*  return the list of successive results. */   
 /*  This code is released to the public domain.  */  
+/*  "Share and enjoy..."  ;)                     */   
+
 
 #include <stdio.h>
 #include <stdlib.h>

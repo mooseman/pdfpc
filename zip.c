@@ -20,11 +20,11 @@ void func(int arg)
 void zip( int *array1, int *array2, int length1, int length2, void myfunc) 
 { 
     int i ; 
-    /* Test the array lengths, If they are not equal, return an 
-     * error message.  */     
+    /* Test the array lengths, If they are not equal, only zip up to 
+     * the length of the shortest one. */     
     if(length1 != length2) 
       { 
-         printf("Arrays not of equal length!");   
+         printf("Using shortest array... ");   
       } 
     else 
       {          
