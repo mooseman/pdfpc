@@ -14,9 +14,8 @@
 
 int main()
 {
-    int myarray[] = {32, 67, 25, 48}; 
-    int length = sizeof(myarray) / sizeof(*myarray);
-    printf( "myarray at %x has length %d \n", myarray, sizeof(myarray) / sizeof(*myarray) ) ;
+    int myarray[] = {32, 67, 25, 48, 5, 17, 23}; 
+    int length = sizeof(myarray) / sizeof(*myarray);    
     printf("length of myarray is %d \n", length); 
     return 0; 
 }

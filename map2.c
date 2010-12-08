@@ -4,7 +4,7 @@
 
 /*                                                     
   A simple program to map an integer (in a given range) 
-  to another integer.  
+  to a text string.  
   This code is released to the public domain. 
   "Share and enjoy...."   ;)  
 */                    
@@ -17,57 +17,18 @@
 #include <math.h> 
 
      
-/*  Our map function. rstart and rend are the range start and end 
-    values  */   
-int map1(int inputval)
-{  
-   /*  A helper function. This allows us to work around C's non-support 
-       of ranges in the case statement.    
-       NOTE - On Linux, you need to link using the flag -lm as the math 
-       functions are apparently in a different library that
-       the compiler does not link against unless you tell it to. 
-       It is called libm.so   
-       So, ny build command looks like this - 
-       gcc -Wall "%f" -lm   */  
-              
-       /*  This function does the following mappings - 
-        *  0..9 inclusive map to 100 
-        *  10..19 inclusive map to 200 
-        *  20..29 inclusive map to 300 
-        *  30..39 inclusive map to 400 
-        *  Any other integer maps to itself.    
-       */         
-              
-   int temp = floor( (double) inputval / 10) ; 
-    
-   switch(temp) 
-     {
-     case (0):         
-        return 100;
-        break; 
-     case (1):                 
-        return 200;
-        break; 
-     case (2):                 
-        return 300;
-        break; 
-     case (3):                 
-        return 400;
-        break; 
-     default: 
-        return inputval; 
-     }            
-} 
-
-
-/*  A mapping function which returns a string  */ 
-/*  This function does the following mappings - 
+/*  A function which returns a string according to the range  
+    that an integer is in.     
+    This function does the following mappings - 
     0..9 inclusive map to "foo" 
     10..19 inclusive map to "bar" 
     20..29 inclusive map to "baz"     
     Any other integer maps to "other".  */  
-char *map2(int inputval) 
-{
+char *func(int inputval) 
+{  
+   /*  "Temp" is a helper function, to allow us to work around 
+       C's non-support of ranges in the case statement. */ 
+                  
    int temp = floor( (double) inputval / 10) ; 
     
    switch(temp) 
@@ -87,32 +48,40 @@ char *map2(int inputval)
 } 
 
 
+/*  Our map function to apply a function to an array. */ 
+void map(int array[], int len, char *(*fn)(int) ) 
+{ 
+                      
+  /* An array to store the results  */  
+  char *resarray[len] ; 
+      
+  int i; 
+  
+  for(i=0; i<len; i++) 
+  { 
+     resarray[i] = fn(array[i]);        
+     printf("Array[%d] is %d, Result[%d] is %s\n", i, array[i], i, resarray[i]);                   
+  } 
+  
+} 
+
+
     
 int main(void) 
 { 
   
-  char ch; 
-  int inval; 
-  int retval1; 
-  char *retval2; 
-      
-      
-  do { 
-    puts("Enter a number :"); 
-    scanf("%d", &inval);  
+/*  A function pointer to use  */ 
+  char *(*ptr)(int) ;       
     
-    retval1 = map1(inval);  
-    retval2 = map2(inval);  
-    
-    printf("Map1 maps your number to %d \n", retval1); 
-    printf("Map2 maps your number to %s \n", retval2);  
-    
-    printf("Try again? (y/n) : "); 
-    scanf(" %c%*c", &ch);  
-  } 
+/*  Point the function pointer at our function */     
+  ptr = func;   
   
-    while( toupper(ch) != 'N' );  
-       
+  int myarray[] = { 3, 5, 11, 17, 24, 28, 37, 45}; 
+  
+  int len = sizeof(myarray) / sizeof(*myarray);   
+  
+  map(myarray, len, *ptr); 
+  
   return 0; 
 
 } 

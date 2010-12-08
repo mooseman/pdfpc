@@ -17,17 +17,16 @@
 #include <math.h> 
 
      
-/*  Our map function. rstart and rend are the range start and end 
-    values  */   
-int map1(int inputval)
+/*  A simple function to apply to an integer. */   
+int func(int inputval)
 {  
-   /*  A helper function. This allows us to work around C's non-support 
-       of ranges in the case statement.    
+   /*  "Temp" is a helper function, to allow us to work around 
+       C's non-support of ranges in the case statement.    
        NOTE - On Linux, you need to link using the flag -lm as the math 
        functions are apparently in a different library that
        the compiler does not link against unless you tell it to. 
        It is called libm.so   
-       So, ny build command looks like this - 
+       So, the build command looks like this - 
        gcc -Wall "%f" -lm   */  
               
        /*  This function does the following mappings - 
@@ -59,30 +58,40 @@ int map1(int inputval)
      }            
 } 
 
+/*  Our map function to apply a function to an array. */ 
+void map(int array[], int len, int (*fn)(int) ) 
+{ 
+                      
+  /* An array to store the results  */  
+  int resarray[len] ; 
+      
+  int i; 
+  
+  for(i=0; i<len; i++) 
+  { 
+     resarray[i] = fn(array[i]);        
+     printf("Array[%d] is %d, Result[%d] is %d\n", i, array[i], i, resarray[i]);                   
+  } 
+  
+} 
+
 
     
 int main(void) 
 { 
   
-  char ch; 
-  int inval; 
-  int retval; 
-      
-      
-  do { 
-    puts("Enter a number :"); 
-    scanf("%d", &inval);  
+/*  A function pointer to use  */ 
+  int (*ptr)(int) ;       
     
-    retval = map1(inval);  
-    
-    printf("Your number maps to %d \n", retval);  
-    
-    printf("Try again? (y/n) : "); 
-    scanf(" %c%*c", &ch);  
-  } 
+/*  Point the function pointer at our function */     
+  ptr = func;   
   
-    while( toupper(ch) != 'N' );  
-       
+  int myarray[] = { 3, 5, 11, 17, 24, 28, 37, 45}; 
+  
+  int len = sizeof(myarray) / sizeof(*myarray);   
+  
+  map(myarray, len, *ptr); 
+  
   return 0; 
 
 } 
