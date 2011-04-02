@@ -4,14 +4,7 @@
 
 This small project is aimed at creating some public-domain 
 C code (using a functional-programming approach) for 
-manipulating data structures - mostly lists.  
-
-Acknowledgement - I have included the file "stb.h" in this project.  
-That is a very good public-domain C utility library. It was done by 
-Sean Barrett, and is from here - 
-http://nothings.org/stb/stb_h.html .  
-Many thanks to Sean for doing that! 
-*****************************************************
+manipulating data structures - mostly arrays.  
 
 The aim is for pdfpc to eventually cover all of the following 
 areas. Note that Lpred and Lsucc are different to Haskell's 
@@ -24,12 +17,14 @@ Those functions work on enums - these ones work on arrays.
 *  Concat (join) 
 *  Cons (:)  
 *  Drop  
-*  Elem ( Array membership  (the "in" operator)  ) 
-*  ElemIndex 
-*  Filter 
-*  Find 
-*  FindIndex 
-*  FindIndices 
+*  Elem - Done ( Array membership  (the "in" operator)  ) 
+*  ElemIndex - The index (if any) of the first occurrence of an element. 
+*  Filter - Done 
+*  Find - Done 
+*  FindIndex - Find the index of the first element in a list which satisfies a 
+    condition.   - Done  
+*  FindIndices -  Find the indices of ALL elements in a list which satisfy 
+   a condition.   - Done 
 *  Fold - Done  
 *  Fst 
 *  Group 
@@ -49,7 +44,7 @@ Those functions work on enums - these ones work on arrays.
 *  Lpred - Done.  Return the array ("list") element before the specified one. 
 *  Lsucc  - Done.  Return the array ("list") element after the specified one. 
 *  Map - Done.   
-*  NotElem ( Array non-membership  (the "not in" operator) )  
+*  NotElem - Done ( Array non-membership  (the "not in" operator) )  
 *  Nub (removes duplicates from a list) 
 *  NubBy 
 *  Partition 
