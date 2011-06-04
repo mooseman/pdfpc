@@ -11,8 +11,9 @@ areas. Note that Lpred and Lsucc are different to Haskell's
 "pred" and "succ" functions.  
 Those functions work on enums - these ones work on arrays.  
 
-*  All 
-*  Any 
+*  All - returns TRUE if all elements in an array meet a condition. 
+*  Any - returns TRUE if at least one element in an array meets 
+   a condition. 
 *  Append (++)  
 *  Concat (join) 
 *  Cons (:)  
